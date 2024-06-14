@@ -25,6 +25,11 @@ class isiop extends StatelessWidget {
             return ListView(
               children: snapshot.data!.docs.map((document) {
                 Map<String, dynamic> data = document.data()! as Map<String, dynamic>;
+                Color statusColor = Colors.red; // Mengatur warna awal menjadi merah
+                if (data['status'] == 'Sudah Diperbaiki') {
+                  statusColor = Colors.green; // Mengubah warna jika status adalah 'Sudah Diperbaiki'
+                }
+                
                 return Container(
                   margin: EdgeInsets.only(bottom: 16.0),
                   height: 250,
@@ -51,7 +56,7 @@ class isiop extends StatelessWidget {
                               width: 100,
                               height: 50,
                               decoration: BoxDecoration(
-                                color: data['status'] == 'Rusak' ? Colors.red : Colors.green,
+                                color: statusColor,
                               ),
                               child: Center(
                                 child: Text(

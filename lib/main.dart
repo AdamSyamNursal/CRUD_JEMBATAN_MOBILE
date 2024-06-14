@@ -34,15 +34,12 @@ class MyApp extends StatelessWidget {
         // "/user" : (context) => userpage(),
         // "/user_detail" : (context) => userdetail(),
         "/login" : (context) => login(),
-        "/operator" : (context) => operatorpage(),
+        "/operator": (context) => operatorpage(), // Gunakan operatorName dari arguments
         // "/operatordetail" : (context) => operatordetail(),
          "/tambahlaporan" : (context) => Tambahlaporan(),
          "/isi" : (context) => isi(),
-         "/profil" : (context) => profil(),
+         "/profil": (context) => profil(),
          "/isiop" : (context) => isiop(),
-
-
-
       },
       
     );

@@ -93,7 +93,7 @@ class profil extends StatelessWidget{
                       color: Colors.grey.shade400
                     ),
                     child: Center(
-                      child: Text("Faiz Rendang"),
+                      child: Text("OPERATOR"),
                     ),
                   ),
                   SizedBox(
